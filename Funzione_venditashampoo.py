@@ -2,14 +2,14 @@
 def totale_vendite (file):
 
     # Apro il file 
-    file = open('shampoo_sales.csv', 'r')
+    File = open(file, 'r')
 
     # Faccio una lista dove salvare i singoli valori
     elementi_lista = []
     valore_vendite = []
 
     # Per ogni linea, separo la data dal valore e aggiungo il valore convertito in float alla lista
-    for line in file:
+    for line in File:
         elementi_lista = line.split(',')
         data = elementi_lista [0]
         valore = elementi_lista [1]
@@ -28,7 +28,7 @@ file = 0
 totale = 0
 
 # Richiamo la funzione
-totale = totale_vendite(file)
+totale = totale_vendite('shampoo_sales.csv')
 
 # Stampo il risultato
 print('{}'.format(totale))
